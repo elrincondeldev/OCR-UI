@@ -26,13 +26,13 @@ _(Demo video: [public/ocr_v1.mp4](public/ocr_v1.mp4))_
 
 ## Tech Stack
 
-| | |
-|---|---|
-| Framework | React 19 + React Router 7 |
-| Language | TypeScript |
-| Styling | Tailwind CSS v3 |
-| Build | Vite |
-| Backend | REST API at `http://localhost:3000` |
+|           |                                     |
+| --------- | ----------------------------------- |
+| Framework | React 19 + React Router 7           |
+| Language  | TypeScript                          |
+| Styling   | Tailwind CSS v3                     |
+| Build     | Vite                                |
+| Backend   | REST API at `http://localhost:3000` |
 
 No external component libraries — all UI is built with Tailwind utility classes.
 
@@ -73,12 +73,11 @@ Output goes to `dist/`. Preview with `npm run preview`.
 
 The frontend talks to these endpoints on the backend:
 
-| Method | Path | Description |
-|--------|------|-------------|
-| `POST` | `/api/v1/process-delivery-note` | Upload a file for OCR processing (multipart) |
-| `GET` | `/api/v1/delivery-notes` | List delivery notes with filter + pagination |
-| `PATCH` | `/api/v1/delivery-notes/:id/validate` | Submit corrections for a document |
-| `GET` | `/health` | Backend health check |
+| Method  | Path                                  | Description                                  |
+| ------- | ------------------------------------- | -------------------------------------------- |
+| `POST`  | `/api/v1/process-delivery-note`       | Upload a file for OCR processing (multipart) |
+| `GET`   | `/api/v1/delivery-notes`              | List delivery notes with filter + pagination |
+| `PATCH` | `/api/v1/delivery-notes/:id/validate` | Submit corrections for a document            |
 
 The base URL is set in [`src/shared/api/client.ts`](src/shared/api/client.ts). Change it there to point at a different environment.
 
