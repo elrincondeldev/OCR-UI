@@ -1,35 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ToastProvider } from './shared/components/Toaster';
+import { DeliveryNotesPage } from './features/delivery-notes/DeliveryNotesPage';
+import { DeliveryNoteDetailPage } from './features/delivery-note-detail/DeliveryNoteDetailPage';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      <ToastProvider>
+        <Routes>
+          <Route path="/" element={<DeliveryNotesPage />} />
+          <Route path="/delivery-notes/:id" element={<DeliveryNoteDetailPage />} />
+        </Routes>
+      </ToastProvider>
+    </BrowserRouter>
+  );
 }
-
-export default App
