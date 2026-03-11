@@ -18,7 +18,9 @@ When a delivery note (PDF or image) is uploaded, the backend OCR service extract
 
 ## Screenshots
 
-> _Add screenshots here once the UI is stable._
+https://github.com/your-repo/public/ocr_v1.mp4
+
+_(Demo video: [public/ocr_v1.mp4](public/ocr_v1.mp4))_
 
 ---
 
